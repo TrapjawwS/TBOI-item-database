@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>TBOI Items</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Use</th>
+  </tr>
+  <tr>
+    <td>Anarchist Cookbook</td>
+    <td>Spawns six troll bombs around the room.</td>
+  </tr>
+  <tr>
+    <td>The Bean</td>
+    <td>Causes Isaac to have bad gas, poisoning any enemy in close vicinity.
+    </td>
+  </tr>
+  <tr>
+    <td>Bob's Rotten Head</td>
+    <td>Throws a bomb in the direction Isaac's facing. It does extreme damage, poisons the enemy for 5 seconds, and destroys rocks.
+    </td>
+  </tr>
+  <tr>
+    <td>The Bible</td>
+    <td>Upon activation, Isaac gains Flight, allowing him to pass over all obstacles in the current room. Instantly kills Mom, Mom's Heart and It Lives when activated, will kill Isaac when activated while fighting Satan, Isaac or ??? unless he has The Wafer.
+    </td>
+  </tr>
+  <tr>
+    <td>The Book Of Belial</td>
+    <td>Adds 2 points of damage for the current room. Damage is further multiplied by 1.5x with the Blood Of The Martyr item. Also increases chances of a Devil Room spawning by 25%.
+    </td>
+  </tr>
+  <tr>
+    <td>The Book Of Belial</td>
+    <td>Adds 2 points of damage for the current room. Damage is further multiplied by 1.5x with the Blood Of The Martyr item. Also increases chances of a Devil Room spawning by 25%.</td>
+  </tr>
+  <tr>
+    <td>Book Of Revelations</td>
+    <td>Adds 1 Soul Heart and makes the next boss a Horseman (except on XL Floors and on floors with fixed bosses such as Mom). Increases chances of a Devil Room spawning by 35%.
+    </td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+<tr>
+  <td>Paris specialites</td>
+  <td>France</td>
+</tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
